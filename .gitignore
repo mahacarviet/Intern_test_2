@@ -4,7 +4,6 @@ _build/
 # dotfiles
 .*
 !.gitignore
-!.github
 !.mailmap
 # compiled python files
 *.py[co]
@@ -39,3 +38,33 @@ setup/win32/static/postgresql*.exe
 /man/
 /share/
 /src/
+
+
+/setup/
+.mailmap
+CONTRIBUTING.md
+COPYRIGHT
+LICENSE
+MANIFEST.in
+README.md
+SECURITY.md
+addons/
+debian/
+doc/
+odoo-bin
+odoo/
+requirements.txt
+setup.cfg
+setup.py
+
+
+/backup
+/backup/
+/customaddons_backup
+/customaddons_backup/
+/enterpriseaddons_backup
+/enterpriseaddons_backup/
+/shell
+/shell/
+.local
+local.tar.gz
