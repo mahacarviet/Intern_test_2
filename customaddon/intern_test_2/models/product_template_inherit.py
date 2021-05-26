@@ -8,7 +8,7 @@ class ProductTemplateInherit(models.Model):
     date_to = fields.Date(string="Warranty To")
     product_warranty = fields.Char(compute="_compute_product_warranty", string="Product Warranty")
     check_product_warranty = fields.Boolean(compute="_compute_check_product_warranty")
-    check_product_time = fields.Boolean(compute="_compute_check_product_time")
+    check_product_time = fields.Boolean(compute="_compute_check_product_time", store=True)
     day_warranty = fields.Integer(compute="_compute_day_warranty", string="Day Warranty")
 
     # @api.depends('date_to')
@@ -45,6 +45,7 @@ class ProductTemplateInherit(models.Model):
             else:
                 rec.check_product_warranty = False
 
+    # @api.depends('date_to', 'check_product_time')
     def _compute_day_warranty(self):
         for rec in self:
             if rec.check_product_time == True:

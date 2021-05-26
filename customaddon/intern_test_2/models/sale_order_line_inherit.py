@@ -9,7 +9,7 @@ class SaleOrderLineInherit(models.Model):
     date_from = fields.Date(related="product_template_id.date_from", string="Warranty From")
     date_to = fields.Date(related="product_template_id.date_to",string="Warranty To")
     check_product_warranty = fields.Boolean(related="product_template_id.check_product_warranty")
-    check_product_time = fields.Boolean(related="product_template_id.check_product_time")
+    check_product_time = fields.Boolean(related="product_template_id.check_product_time", store=True)
     day_warranty = fields.Integer(related="product_template_id.day_warranty", string="Day Warranty")
 
 

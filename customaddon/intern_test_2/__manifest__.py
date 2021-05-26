@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sale_management', 'product'],
+    'depends': ['base', 'sale_management', 'product', 'account' ],
 
     # always loaded
     'data': [
@@ -29,6 +29,7 @@
         'views/templates.xml',
         'views/product_template_inherit_view.xml',
         'views/sale_order_inherit_view_form.xml',
+        'views/product_filter_warranty.xml'
 
     ],
     # only loaded in demonstration mode
