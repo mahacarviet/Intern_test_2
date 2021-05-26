@@ -11,8 +11,8 @@
 
                 <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
                     <!-- Add your fields or attributes here -->
-<!--                    <field name="date_from"/>-->
-<!--                    <field name="date_to"/>-->
+                    <!--                    <field name="date_from"/>-->
+                    <!--                    <field name="date_to"/>-->
                     <field name="product_warranty"/>
                     <field name="day_warranty"/>
                 </xpath>
