@@ -4,11 +4,12 @@ from datetime import *
 class ProductTemplateInherit(models.Model):
     _inherit = 'product.template'
 
-    date_to = fields.Date(string="Warranty From")
-    date_from = fields.Date(string="Warranty To")
+    date_from = fields.Date(string="Warranty From")
+    date_to = fields.Date(string="Warranty To")
     product_warranty = fields.Char(compute="_compute_product_warranty", string="Product Warranty")
     check_product_warranty = fields.Boolean(compute="_compute_check_product_warranty")
     check_product_time = fields.Boolean(compute="_compute_check_product_time")
+    day_warranty = fields.Integer(compute="_compute_day_warranty", string="Day Warranty")
 
     # @api.depends('date_to')
     def _compute_check_product_time(self):
@@ -44,3 +45,9 @@ class ProductTemplateInherit(models.Model):
             else:
                 rec.check_product_warranty = False
 
+    def _compute_day_warranty(self):
+        for rec in self:
+            if rec.check_product_time == True:
+                rec.day_warranty = (rec.date_to - date.today()).days
+            else:
+                rec.day_warranty = ''

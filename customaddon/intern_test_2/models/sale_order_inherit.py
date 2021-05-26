@@ -11,6 +11,8 @@ class SaleOrderLineInherit(models.Model):
     date_to = fields.Date(related="product_template_ids.date_to", string="Warranty To")
     check_product_warranty = fields.Boolean(related="product_template_ids.check_product_warranty")
     check_product_time = fields.Boolean(related="product_template_ids.check_product_time")
+    day_warranty = fields.Integer(related="product_template_ids.day_warranty", string="Day Warranty")
+
 
     discount_total = fields.Monetary(compute="_compute_discount_total")
 
