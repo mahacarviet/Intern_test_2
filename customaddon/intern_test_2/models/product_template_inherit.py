@@ -52,3 +52,15 @@ class ProductTemplateInherit(models.Model):
                 rec.day_warranty = (rec.date_to - date.today()).days
             else:
                 rec.day_warranty = ''
+
+    def action_update_product_warranty(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'My Company',
+            'view_mode': 'form',
+            'res_model': 'update.product.warranty.wizard',
+            'target': 'new',
+            'context': {
+                'default_product_template_wizard': self.ids,
+            }
+        }
