@@ -11,7 +11,11 @@
                 <xpath expr="//field[@name='company_id']" position="after">
                     <!-- Add your fields or attributes here -->
                     <field name="date_from"/>
+                    <!--                    Add group in field-->
+                    <!--                    groups="intern_test_2.group_employee_manager"-->
                     <field name="date_to"/>
+                    <!--                    Add group in field-->
+                    <!--                    groups="intern_test_2.group_employee_manager"-->
                     <field name="product_warranty"/>
                 </xpath>
             </field>

@@ -27,7 +27,8 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'views/product_template_product_inherit_view.xml',
+        'views/product_template_inherit_view.xml',
+        'views/sale_order_inherit_view_form.xml',
 
     ],
     # only loaded in demonstration mode
