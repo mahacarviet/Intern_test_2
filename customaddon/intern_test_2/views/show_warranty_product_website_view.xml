@@ -13,6 +13,8 @@
 
                 <!-- Nothing to do, this view is only meant to allow the server -->
                 <!-- to know if the list view layout should be used -->
+                <td class="text-center td-warranty" t-if="line.product_id.check_product_warranty == False"> Not
+                    Warranty</td>
                 <td class="text-center td-warranty" t-if="line.product_id.check_product_warranty == True">
                     <span t-field="line.product_id.product_warranty"/>
                 </td>
