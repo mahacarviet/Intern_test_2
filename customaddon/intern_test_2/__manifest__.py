@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sale_management', 'product', 'account' ],
+    'depends': ['base', 'sale_management', 'product', 'account', 'website_sale' ],
 
     # always loaded
     'data': [
@@ -30,7 +30,8 @@
         'views/product_template_inherit_view.xml',
         'views/sale_order_inherit_view_form.xml',
         'views/product_filter_warranty.xml',
-        'wizard/update_product_warranty_wizard_view.xml'
+        'wizard/update_product_warranty_wizard_view.xml',
+        'views/show_warranty_product_website_view.xml'
 
     ],
     # only loaded in demonstration mode
